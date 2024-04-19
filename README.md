@@ -1,6 +1,6 @@
 Portfolio of work to demonstrate my skills in various enginneering fields. There will be more work and links coming soon.
 
-General overview: The pixelator robot studio simulation was a program that took in a 3D matrix and used it to create pixel art by having the robot arm pick up various colored stamps and stamp them onto a large sheet of paper
+General overview: The Pixelator robot is a Robot Studio program that took in a 2d image and used it to create pixel art by having the robot arm pick up various colored stamps and stamp them onto a large sheet of paper
 
 The Robopuppet Arm code is for my capstone project, a voodoo-style controller for a Baxter robot. It has both the ROS code and firmware
 

@@ -1,0 +1,6 @@
+geometry_msgs/PoseStamped goal
+std_msgs/Bool pub_gridcells
+---
+geometry_msgs/PoseArray waypoints
+std_msgs/Float32 time_cost
+std_msgs/String exception

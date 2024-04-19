@@ -1,0 +1,32 @@
+<!-- RBE-3002-B18 Lab 4 Navigation -->
+<launch>
+
+	<!-- Arguments -->
+	<arg name="grid_size"   	default="0.10" 	doc="Gmapping grid cell width"/>
+	<arg name="drive_speed" 	default="0.12" 	doc="Max drive speed in meters per second"/>
+	<arg name="turn_speed"		default="1.50" 	doc="Max turn speed in radians per second"/>
+	<arg name="cspace_radius" 	default="0.15" 	doc="C-space wall-expansion radius in meters"/>
+
+	<!-- RViz Node -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find lab4)/config/mapping.rviz"/>
+
+	<!-- Navigation Nodes -->
+	<node name="cspace" type="map_to_cspace.py" pkg="lab4" output="screen">
+		<param name="cspace_radius"	value="$(arg cspace_radius)" 	type="double"/>
+		<param name="grid_size" 	value="$(arg grid_size)" 		type="double"/>
+	</node>
+	<node name="frontiers" type="frontier_manager.py" pkg="lab4" output="screen"/>
+	<node name="odom_to_map" type="odom_to_map.py" pkg="lab4" output="screen"/>
+	<node name="waypoints" type="waypoint_driver.py" pkg="lab4" output="screen">
+		<param name="drive_speed" 	value="$(arg drive_speed)"		type="double"/>
+		<param name="turn_speed" 	value="$(arg turn_speed)"		type="double"/>
+		<param name="cspace_radius" value="$(arg cspace_radius)" 	type="double"/>
+	</node>
+	<node name="astar" type="a_star.py" pkg="lab4" output="screen">
+		<param name="cspace_radius" value="$(arg cspace_radius)" 	type="double"/>
+		<param name="grid_size" 	value="$(arg grid_size)" 		type="double"/>
+		<param name="drive_speed" 	value="$(arg drive_speed)" 		type="double"/>
+		<param name="turn_speed" 	value="$(arg turn_speed)" 		type="double"/>
+	</node>
+	
+</launch>

@@ -1,4 +1,4 @@
-# ResumePortfolio
+# Resume Portfolio
 
 Portfolio of work to demonstrate my skills in various enginneering fields. There will be more work and links coming soon. 
 
@@ -11,6 +11,8 @@ The Robopuppet Arm code is for my capstone project, a voodoo-style controller fo
 The Robopuppet Solidworks skeleton has the major parts and subcomponents for the mechanical design of the arm, but unfortunately due to a hard drive crash, it is missing some of the smaller details, like washers, shafts, and nuts and bolts.
 
 Square Stacker AI- in this project, I was part of a team that tested various AI agents to determine the best agent to play the CoolMathGames flash game "Square Stacker." We used Monte Carlo, short term memory, and graph search. Due to the randomized nature of the game, my depth-limited random graph search came out as the best agent.
+
+The Nuclear Maintenance Simulation Bot is the code to simulate a system that would maintain a nuclear power plant. A small maintenance robot navigates to spent fuel rods, moves them to the waste center, and replaces them with new ones. 
 
 
 Additional links:
